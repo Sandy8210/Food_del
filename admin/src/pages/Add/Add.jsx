@@ -4,7 +4,7 @@ import { assets } from "../../assets/assets";
 import axios from "axios";
 import { toast } from "react-toastify";
 
-const Add = ({url}) => {
+const Add = ({ url }) => {
   const [image, setImage] = useState(false);
   const [data, setData] = useState({
     name: "",
@@ -51,40 +51,17 @@ const Add = ({url}) => {
         <div className="add_img_upload flex_col">
           <p>Upload Image</p>
           <label htmlFor="image">
-            <img
-              src={image ? URL.createObjectURL(image) : assets.upload_area}
-              alt=""
-            />
+            <img src={image ? URL.createObjectURL(image) : assets.upload_area} alt="" />
           </label>
-          <input
-            onChange={(e) => setImage(e.target.files[0])}
-            type="file"
-            id="image"
-            hidden
-            required
-          />
+          <input onChange={(e) => setImage(e.target.files[0])} type="file" id="image" hidden required />
         </div>
         <div className="add_product_name flex_col">
           <p>Product name</p>
-          <input
-            onChange={handleChange}
-            value={data.name}
-            type="text"
-            name="name"
-            placeholder="Type here"
-            required
-          />
+          <input onChange={handleChange} value={data.name} type="text" name="name" placeholder="Type here" required />
         </div>
         <div className="add_product_description flex_col">
           <p>Product description</p>
-          <textarea
-            value={data.description}
-            onChange={handleChange}
-            name="description"
-            rows="6"
-            placeholder="Write content here"
-            required
-          ></textarea>
+          <textarea value={data.description} onChange={handleChange} name="description" rows="6" placeholder="Write content here" required></textarea>
         </div>
         <div className="add_category_price">
           <div className="add_category flex_col">
@@ -102,14 +79,7 @@ const Add = ({url}) => {
           </div>
           <div className="add_price flex_col">
             <p>Priduct price</p>
-            <input
-              onChange={handleChange}
-              value={data.price}
-              type="Number"
-              name="price"
-              placeholder="$20"
-              required
-            />
+            <input onChange={handleChange} value={data.price} type="Number" name="price" placeholder="$20" required />
           </div>
         </div>
 
