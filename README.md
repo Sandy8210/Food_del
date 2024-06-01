@@ -17,6 +17,10 @@
     => email : sandy@gmail.com , password : 000001
     => email : sandy1@gmail.com , password : 000002
 
+# Card Details : 
+
+    => card number : 4000003560000008
+
 # Server Dependencies:
 
     => npm i express
